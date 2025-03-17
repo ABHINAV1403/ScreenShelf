@@ -1,0 +1,189 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    padding: 20px;
+}
+
+.folder-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.folder {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.folder:hover {
+    background-color: #333;
+}
+
+.add-folder {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: orange;
+    border: none;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#backBtn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: orange;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#deleteFolderBtn,
+#renameFolderBtn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #ff4d4d; /* Red for delete */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    margin-left: 10px;
+}
+
+#renameFolderBtn {
+    background-color: #4CAF50; /* Green for rename */
+    right: 180px; /* Position it to the left of the delete button */
+    margin-right: 10px; /* Add space between rename and delete buttons */
+}
+
+#deleteFolderBtn {
+    background-color: #ff4d4d; /* Red for delete */
+    right: 20px; /* Position it to the right */
+}
+
+.hidden {
+    display: none;
+}
+
+#movieResults {
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.movie {
+    display: flex;
+    justify-content: space-between; /* Space between title and buttons */
+    align-items: center; /* Vertically center items */
+    background-color: #2c2c2c;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.movie-info {
+    flex-grow: 1; /* Allow the movie title to take up remaining space */
+    text-align: left; /* Align title to the left */
+}
+
+.movie-actions {
+    display: flex;
+    gap: 10px; /* Add spacing between buttons */
+}
+
+.movie-suggestion {
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.movie-suggestion:hover {
+    background-color: #333;
+}
+
+toggle-button {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+
+..toggle-button.mark-watched {
+    background-color: #007BFF; /* Blue for "Mark as Watched" */
+}
+
+.toggle-button.watched {
+    background-color: #4CAF50; /* Green for "Watched" */
+}
+
+.toggle-button:hover {
+    opacity: 0.8;
+}
+
+.delete-button {
+    background-color: #ff4d4d; /* Red for delete */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.toggle-button:hover,
+.delete-button:hover {
+    opacity: 0.8;
+}
+
+#searchBox {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 80%;
+    margin-top: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #1e1e1e;
+    color: white;
+    font-size: 14px;
+    border-top: 1px solid #333;
+}

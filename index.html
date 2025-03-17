@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScreenShelf</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ScreenShelf</h1>
+        <div id="folderContainer" class="folder-grid"></div>
+        <button id="addFolderBtn" class="add-folder">+</button>
+    </div>
+
+    <div id="folderView" class="hidden">
+        <button id="backBtn">← Back</button>
+        <button id="deleteFolderBtn">Delete Folder</button>
+        <button id="renameFolderBtn">Rename Folder</button>
+        <h2 id="folderTitle"></h2>
+        <button id="addMovieBtn">Add Movie/TV Show</button>
+        <input type="text" id="searchBox" placeholder="Search for a movie or TV show">
+        <div id="movieResults"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+<footer>
+    Made by Abhinav
+</footer>
+</html>
