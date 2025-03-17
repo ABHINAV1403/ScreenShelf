@@ -122,6 +122,7 @@ body {
     gap: 10px; /* Add spacing between buttons */
 }
 
+
 .movie-suggestion {
     padding: 10px;
     cursor: pointer;
@@ -132,7 +133,7 @@ body {
     background-color: #333;
 }
 
-toggle-button {
+.toggle-button {
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
@@ -141,16 +142,12 @@ toggle-button {
     transition: 0.3s;
 }
 
-..toggle-button.mark-watched {
+.toggle-button.mark-watched {
     background-color: #007BFF; /* Blue for "Mark as Watched" */
 }
 
 .toggle-button.watched {
     background-color: #4CAF50; /* Green for "Watched" */
-}
-
-.toggle-button:hover {
-    opacity: 0.8;
 }
 
 .delete-button {
@@ -160,6 +157,11 @@ toggle-button {
     border-radius: 5px;
     cursor: pointer;
     color: white;
+}
+
+.toggle-button:hover,
+.delete-button:hover {
+    opacity: 0.8;
 }
 
 .toggle-button:hover,
