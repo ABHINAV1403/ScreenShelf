@@ -163,6 +163,7 @@ function addMovieToFolder(movie) {
 }
 
 // Function to render movies in a folder
+// Function to render movies in a folder
 function renderMovies(folderName) {
     const movieResults = document.getElementById("movieResults");
     movieResults.innerHTML = ""; // Clear previous results
@@ -174,23 +175,30 @@ function renderMovies(folderName) {
 
             // Movie title and year
             const movieInfo = document.createElement("span");
+            movieInfo.classList.add("movie-info");
             movieInfo.textContent = `${movie.Title} (${movie.Year})`;
             movieDiv.appendChild(movieInfo);
 
+            // Container for buttons
+            const movieActions = document.createElement("div");
+            movieActions.classList.add("movie-actions");
+
             // Watched/Yet to Watch toggle
             const toggleButton = document.createElement("button");
-            toggleButton.textContent = movie.watched ? "Watched" : "Mark as watched";
+            toggleButton.textContent = movie.watched ? "Watched" : "Mark as Watched";
             toggleButton.classList.add("toggle-button");
+            toggleButton.classList.add(movie.watched ? "watched" : "mark-watched"); // Add dynamic class
             toggleButton.onclick = () => toggleWatchedStatus(folderName, index);
-            movieDiv.appendChild(toggleButton);
+            movieActions.appendChild(toggleButton);
 
             // Delete movie button
             const deleteButton = document.createElement("button");
             deleteButton.textContent = "Delete";
             deleteButton.classList.add("delete-button");
             deleteButton.onclick = () => deleteMovieFromFolder(folderName, index);
-            movieDiv.appendChild(deleteButton);
+            movieActions.appendChild(deleteButton);
 
+            movieDiv.appendChild(movieActions);
             movieResults.appendChild(movieDiv);
         });
     }
